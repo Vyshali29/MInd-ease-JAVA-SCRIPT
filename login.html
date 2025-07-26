@@ -269,5 +269,94 @@
 
 </body>
 
+<script>
+//     function validateLogin() {
+//         // In real scenario: Server will handle session and redirect
+//         alert("Login successful!");
+//         window.location.href = "./index.html";
+//         return false; // Prevent actual form submission for demo
+//     }
+// </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("loginForm");
 
+    const inputs = {
+        email: {
+            input: form.querySelector('input[name="email"]'),
+            pattern: /^[^@\s]+@[^@\s]+\.[^@\s]+$/,
+            message: "Enter a valid email address."
+        },
+        password: {
+            input: form.querySelector('input[name="password"]'),
+            pattern: /^.{6,}$/,
+            message: "Password must be at least 6 characters."
+        }
+    };
+
+    function showError(inputEl, message) {
+        removeError(inputEl);
+
+        const error = document.createElement("div");
+        error.className = "error-message";
+        error.style.color = "red";
+        error.style.fontSize = "13px";
+        error.style.marginTop = "5px";
+        error.textContent = message;
+
+        const inputGroup = inputEl.closest(".input-group");
+        inputGroup.insertAdjacentElement('afterend', error);
+    }
+
+    function removeError(inputEl) {
+        const inputGroup = inputEl.closest(".input-group");
+        const next = inputGroup.nextElementSibling;
+        if (next && next.classList.contains("error-message")) {
+            next.remove();
+        }
+    }
+
+    function validateField(key) {
+        const field = inputs[key];
+        const input = field.input;
+        const value = input.value.trim();
+
+        if (field.pattern && !field.pattern.test(value)) {
+            showError(input, field.message);
+            return false;
+        }
+
+        removeError(input);
+        return true;
+    }
+
+    for (let key in inputs) {
+        inputs[key].input.addEventListener("input", () => validateField(key));
+    }
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+        for (let key in inputs) {
+            if (!validateField(key)) {
+                isValid = false;
+            }
+        }
+
+        const termsCheckbox = document.getElementById("terms");
+        if (!termsCheckbox.checked) {
+            alert("Please agree to the Terms & Conditions.");
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert("Login successful!");
+            //  Redirect or submit to server
+             window.location.href = "./index.html";
+        }
+    });
+});
+</script>
+</html>
 </html>

@@ -268,4 +268,104 @@
 
 
 </body>
+<!-- JS Validation & Redirect -->
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("registerForm");
+
+    const inputs = {
+        name: {
+            input: form.querySelector('input[name="name"]'),
+            pattern: /^[A-Za-z\s]+$/,
+            message: "Name should contain only letters and spaces."
+        },
+        phone: {
+            input: form.querySelector('input[name="phone"]'),
+            pattern: /^[0-9]{10}$/,
+            message: "Phone number must be exactly 10 digits."
+        },
+        email: {
+            input: form.querySelector('input[name="email"]'),
+            pattern: /^[^@\s]+@[^@\s]+\.[^@\s]+$/,
+            message: "Enter a valid email address."
+        },
+        password: {
+            input: form.querySelector('input[name="password"]'),
+            pattern: /^.{6,}$/,
+            message: "Password must be at least 6 characters."
+        },
+        confirm_password: {
+            input: form.querySelector('input[name="confirm_password"]'),
+            matchField: "password",
+            message: "Passwords do not match."
+        }
+    };
+
+    function showError(inputEl, message) {
+        removeError(inputEl);
+
+        const error = document.createElement("div");
+        error.className = "error-message";
+        error.style.color = "red";
+        error.style.fontSize = "13px";
+        error.style.marginTop = "5px";
+        error.textContent = message;
+
+        const inputGroup = inputEl.closest(".input-group");
+        inputGroup.insertAdjacentElement('afterend', error); // place below input-group
+    }
+
+    function removeError(inputEl) {
+        const inputGroup = inputEl.closest(".input-group");
+        const next = inputGroup.nextElementSibling;
+        if (next && next.classList.contains("error-message")) {
+            next.remove();
+        }
+    }
+
+    function validateField(key) {
+        const field = inputs[key];
+        const input = field.input;
+        const value = input.value.trim();
+
+        if (field.pattern && !field.pattern.test(value)) {
+            showError(input, field.message);
+            return false;
+        }
+
+        if (field.matchField) {
+            const matchValue = inputs[field.matchField].input.value.trim();
+            if (value !== matchValue) {
+                showError(input, field.message);
+                return false;
+            }
+        }
+
+        removeError(input);
+        return true;
+    }
+
+    // Real-time input validation
+    for (let key in inputs) {
+        inputs[key].input.addEventListener("input", () => validateField(key));
+    }
+
+    // Final validation on submit
+    form.addEventListener("submit", function (e) {
+        let isValid = true;
+        for (let key in inputs) {
+            if (!validateField(key)) {
+                isValid = false;
+            }
+        }
+
+        if (!isValid) {
+            e.preventDefault(); // stop submission
+        }
+    });
+});
+</script>
+</body>
+</html>
+
 </html>
