@@ -1,2 +1,2 @@
-# MInd--ease---JAVA-SCRIPT
+# MInd-ease-JAVA-SCRIPT
 JS project 
