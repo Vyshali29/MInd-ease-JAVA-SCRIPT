@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind ease -Home Page</title>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+    <link rel="stylesheet" href="./assets/css/home.css">
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo-2.png">
+
+    <!-- PNG version -->
+    <link rel="icon" type="image/png" href="./assets/img/logo-2.png" sizes="32x32">
+
+    <!-- SVG version -->
+    <link rel="icon" type="image/svg+xml" href="./assets/img/logo-2.png">
+
+</head>
+
+<body>
+
+    <!-- navbar started here -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <a href="./index.html" class="navbar-brand">
+            <img src="./assets/img/logo-2.png" alt="Logo">
+        </a>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="navbar-nav">
+            <li><a href="./index.html" class="nav-link active">Home</a></li>
+            <li><a href="./blog.html" class="nav-link ">Blog</a></li>
+            <li><a href="./about.html" class="nav-link ">About Us</a></li>
+            <li><a href="./contact.html" class="nav-link ">Contact Us</a></li>
+            <div class="register-container-1">
+                <a href="./register.html" class="nav-link btn">Register</a>
+            </div>
+        </ul>
+
+
+        <div class="register-container">
+            <a href="./register.html" class="nav-link btn">Register</a>
+        </div>
+    </nav>
+    <!-- navbar end here -->
+
+
+
+    <!-- Carousel Start -->
+    <div class="carousel-container">
+        <div class="carousel-items">
+            <div class="carousel-item" style="background-image: url('./assets/img/carousel-1.jpg');">
+                <div class="hero-header">
+                    <div class="hero-header-inner">
+                        <h2>Learn and master yourself in an easy way</h2>
+                        <p>This app is a leading online logical and empathetic website that helps users find academic,
+                            career, mental health, and other support.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./assets/img/carousel-2.jpg');">
+                <div class="hero-header">
+                    <div class="hero-header-inner">
+                        <h2>Learn and master yourself in an easy way</h2>
+                        <p>This app is a leading online logical and empathetic website that helps users find academic,
+                            career, mental health, and other support.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./assets/img/carousel-3.jpg');">
+                <div class="hero-header">
+                    <div class="hero-header-inner">
+                        <h2>Learn and master yourself in an easy way</h2>
+                        <p>This app is a leading online logical and empathetic website that helps users find academic,
+                            career, mental health, and other support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-nav">
+            <button class="prev" style="margin-left:10px">&#10094;</button>
+            <button class="next" style="margin-right:10px">&#10095;</button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Facilities Start -->
+    <section>
+        <h1 style="text-align: center;margin-top: 70px;">Success Stories</h1>
+        <div class="Facilities">
+
+            <div class="facility-item">
+                <div class="facility-text">
+                    <h3>6200 Students applied</h3>
+                </div>
+            </div>
+            <div class="facility-item">
+                <div class="facility-text">
+                    <h3>1200 Admissions</h3>
+                </div>
+            </div>
+            <div class="facility-item">
+                <div class="facility-text">
+                    <h3>1050 Examination</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Facilities End -->
+
+
+
+    <!-- service start here -->
+    <section>
+
+        <div class="container-fluid">
+            <h1 style="text-align: center; margin-bottom: 38px;">Our Key Career Counselling Solutions</h1>
+            <div class="row service1">
+                <!-- Column 1 -->
+                <div class="col">
+                    <img src="./assets/img/ser-1.png" alt="Career" onclick="openModal('./assets/img/ser-1.png')">
+                    <p>Career</p>
+                </div>
+                <!-- Column 2 -->
+                <div class="col">
+                    <img src="./assets/img/ser-2.png" alt="Well-being" onclick="openModal('./assets/img/ser-2.png')">
+                    <p>Well-being</p>
+                </div>
+                <!-- Column 3 -->
+                <div class="col">
+                    <img src="./assets/img/ser-3.png" alt="Books and Library"
+                        onclick="openModal('./assets/img/ser-3.png')">
+                    <p>Books and Library</p>
+                </div>
+                <!-- Column 4 -->
+                <div class="col">
+                    <img src="./assets/img/ser-4.png" alt="Logical Support"
+                        onclick="openModal('./assets/img/ser-4.png')">
+                    <p>Logical Support</p>
+                </div>
+                <!-- Column 5 -->
+                <div class="col">
+                    <img src="./assets/img/ser-5.png" alt="Time Management"
+                        onclick="openModal('./assets/img/ser-5.png')">
+                    <p>Time Management</p>
+                </div>
+                <!-- Column 6 -->
+                <div class="col">
+                    <img src="./assets/img/ser-6.png" alt="Personal Dashboard"
+                        onclick="openModal('./assets/img/ser-6.png')">
+                    <p>Personal Dashboard</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal " id="imageModal">
+            <div class="modal-content1">
+                <button class="modal-close" onclick="closeModal()">×</button>
+                <img id="modalImage" src="" alt="Modal Image" class="model-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- service end here -->
+
+    <!-- our tracks start here -->
+    <section>
+        <h1 style="text-align: center;padding-top: 20px;">Our Tracks</h1>
+        <p style="text-align: center;padding-top: 20px;padding-bottom: 20px;">Anytime support from the teachers</p>
+        <div class="custom-carousel-container">
+
+            <!-- New Carousel slides -->
+            <div class="custom-carousel-slides">
+                <!-- New Carousel items -->
+                <div class="custom-carousel-slide">
+                    <div class="post-img">
+                        <img src="./assets/img/5.png" alt="Tracy D. Wright">
+                    </div>
+                    <div class="custom-carousel-content">
+                        <h3 class="post-title">Tracy D. Wright</h3>
+                        <p class="post-subtitle">Professor @George Brown College</p>
+                        <span class="post-date text-warning">Mathematics</span>
+                        <a href="#" class="read-more fab fa-linkedin text-decoration-none"></a>
+                    </div>
+                </div>
+                <div class="custom-carousel-slide">
+                    <div class="post-img">
+                        <img src="./assets/img/home-owl-2.png" alt="Daniel Wright">
+                    </div>
+                    <div class="custom-carousel-content">
+                        <h3 class="post-title">Daniel Wright</h3>
+                        <p class="post-subtitle">Professor at George Brown College</p>
+                        <span class="post-date text-warning">Mathematics</span>
+                        <a href="#" class="read-more fab fa-linkedin text-decoration-none"></a>
+                    </div>
+                </div>
+                <div class="custom-carousel-slide">
+                    <div class="post-img">
+                        <img src="./assets/img/1.png" alt="Lily">
+                    </div>
+                    <div class="custom-carousel-content">
+                        <h3 class="post-title">Lily</h3>
+                        <p class="post-subtitle">Professor at George Brown College</p>
+                        <span class="post-date text-warning">Computer Science</span>
+                        <a href="#" class="read-more fab fa-linkedin text-decoration-none"></a>
+                    </div>
+                </div>
+                <div class="custom-carousel-slide">
+                    <div class="post-img">
+                        <img src="./assets/img/2.png" alt="Tracy">
+                    </div>
+                    <div class="custom-carousel-content">
+                        <h3 class="post-title">Tracy</h3>
+                        <p class="post-subtitle">Professor at George Brown College</p>
+                        <span class="post-date text-warning">English</span>
+                        <a href="#" class="read-more fab fa-linkedin text-decoration-none"></a>
+                    </div>
+                </div>
+                <div class="custom-carousel-slide">
+                    <div class="post-img">
+                        <img src="./assets/img/3.png" alt="Grace Watson">
+                    </div>
+                    <div class="custom-carousel-content">
+                        <h3 class="post-title">Grace Watson</h3>
+                        <p class="post-subtitle">Professor at George Brown College</p>
+                        <span class="post-date text-warning">Physics</span>
+                        <a href="#" class="read-more fab fa-linkedin text-decoration-none"></a>
+                    </div>
+                </div>
+                <div class="custom-carousel-slide">
+                    <div class="post-img">
+                        <img src="./assets/img/4.png" alt="Watson Brown">
+                    </div>
+                    <div class="custom-carousel-content">
+                        <h3 class="post-title">Watson Brown</h3>
+                        <p class="post-subtitle">Professor at George Brown College</p>
+                        <span class="post-date text-warning">Chemistry</span>
+                        <a href="#" class="read-more fab fa-linkedin text-decoration-none"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-carousel-nav">
+                <button class="custom-prev">&#10094;</button> <!-- Prev button -->
+                <button class="custom-next">&#10095;</button> <!-- Next button -->
+            </div>
+        </div>
+    </section>
+
+    <!-- our tracks end here -->
+
+    <!-- Service Start here-->
+
+    <section>
+        <div class="container-fluid">
+            <h1 style="text-align: center; margin-bottom: 38px;">Service We Provide</h1>
+
+            <div class="row service1">
+                <!-- Column 1 -->
+                <div class="col">
+                    <img src="./assets/img/career-1.png" style="border: 1px solid black;" alt="Career"
+                        onclick="openModal1('imageModal1', './assets/img/career-1.png')">
+                    <p>Parents</p>
+                </div>
+                <!-- Column 2 -->
+                <div class="col">
+                    <img src="./assets/img/career-2.png" style="border: 1px solid black;" alt="Well-being"
+                        onclick="openModal1('imageModal2', './assets/img/career-2.png')">
+                    <p>Schools</p>
+                </div>
+                <!-- Column 3 -->
+                <div class="col">
+                    <img src="./assets/img/career-3.png" style="border: 1px solid black;" alt="Books and Library"
+                        onclick="openModal1('imageModal3', './assets/img/career-3.png')">
+                    <p>Institutes</p>
+                </div>
+                <!-- Column 4 -->
+                <div class="col">
+                    <img src="./assets/img/career-4.png" style="border: 1px solid black;" alt="Logical Support"
+                        onclick="openModal1('imageModal4', './assets/img/career-4.png')">
+                    <p>Students</p>
+                </div>
+                <!-- Column 5 -->
+                <div class="col">
+                    <img src="./assets/img/career-5.jpg" style="border: 2px solid black;" alt="Time Management"
+                        onclick="openModal1('imageModal5', './assets/img/career-5.png')">
+                    <p>Books and Library</p>
+                </div>
+                <!-- Column 6 -->
+                <div class="col">
+                    <img src="./assets/img/career-6.png" style="border: 1px solid black;" alt="Personal Dashboard"
+                        onclick="openModal1('imageModal6', './assets/img/career-6.png')">
+                    <p>Counselors</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for each image -->
+        <div class="modal" id="imageModal1">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal1('imageModal1')">×</button>
+                <img id="modalImage1" src="" alt="Modal Image">
+            </div>
+        </div>
+
+        <div class="modal" id="imageModal2">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal1('imageModal2')">×</button>
+                <img id="modalImage2" src="" alt="Modal Image">
+            </div>
+        </div>
+
+        <div class="modal" id="imageModal3">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal1('imageModal3')">×</button>
+                <img id="modalImage3" src="" alt="Modal Image">
+            </div>
+        </div>
+
+        <div class="modal" id="imageModal4">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal1('imageModal4')">×</button>
+                <img id="modalImage4" src="" alt="Modal Image">
+            </div>
+        </div>
+
+        <div class="modal" id="imageModal5">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal1('imageModal5')">×</button>
+                <img id="modalImage5" src="" alt="Modal Image">
+            </div>
+        </div>
+
+        <div class="modal" id="imageModal6">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal1('imageModal6')">×</button>
+                <img id="modalImage6" src="" alt="Modal Image">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- service end here -->
+
+
+    <!-- Testimonial Section start here-->
+
+    <section>
+
+
+        <div class="testimonial-section">
+            <h1>App Reviews</h1>
+            <p>See what our users say about us</p>
+        </div>
+        <div class="custom-carousel-container">
+            <!-- Testimonial Carousel -->
+            <div class="testimonial-carousel">
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center">
+                        <img src="./assets/img/testimonial-1.jpg" alt="Rajesh">
+                        <div>
+                            <h3>Rajesh</h3>
+                            <span>Bangalore, Karnataka</span>
+                            <p>"I can't express how grateful I am for the support I've received from Mind ease. The
+                                emotional guidance has helped me manage my stress and anxiety, and the educational
+                                resources have been invaluable for my studies. The community is incredibly supportive,
+                                and the counsellors are always available to lend a listening ear. This site has truly
+                                made a difference in my academic and personal life!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center">
+                        <img src="./assets/img/testimonial-2.png" alt="Reshma">
+                        <div>
+                            <h3>Reshma</h3>
+                            <span>Hyderabad, Andhra Pradesh</span>
+                            <p>"I recently used for help for my logic course, and it was a fantastic experience! The
+                                explanations were clear and easy to follow, and the interactive exercises really helped
+                                solidify my understanding of complex concepts. The support team was also very responsive
+                                and helpful whenever I had questions. Highly recommend this site to any student looking
+                                for extra help in logic!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center">
+                        <img src="./assets/img/testimonial-3.jpg" alt="Karthick">
+                        <div>
+                            <h3>Karthick</h3>
+                            <span>Hyderabad, Andhra Pradesh</span>
+                            <p>"Enrolling in this program was one of the best decisions I've ever made! The courses were
+                                well-structured, the instructors were incredibly supportive, and the interactive
+                                learning approach made studying enjoyable. I especially loved the flexibility, which
+                                allowed me to balance my studies with other commitments. Thanks to this program, I feel
+                                more confident in my skills and ready to take on new challenges. Highly recommended!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="owl-nav">
+                    <button class="prev custom-prev-1">&#8592;</button>
+                    <button class="next custom-next-1">&#8594;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section end here -->
+
+
+
+    <!-- footer started here -->
+    <div class="footer">
+        <div class="Footer-inner">
+            <div class="footer-section">
+                <h5>About Us</h5>
+                <p><a href="#">Terms of Service</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="./contact.html">Contact Us</a></p>
+                <p><a href="#">Partners</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Company</h5>
+                <p><a href="./index.html">Home</a></p>
+                <p><a href="./about.html">About us</a></p>
+                <p><a href="#">Our Team</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Services</h5>
+                <p><a href="#">Career guide</a></p>
+                <p><a href="#">Psychometric test</a></p>
+                <p><a href="#">Skill based test</a></p>
+                <p><a href="#">Course Details</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Social Media</h5>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/" target="blank"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h5>Stay up to date</h5>
+                <p>Be the first to know about our newest apartments</p>
+                <form class="subscribe">
+                    <input type="email" placeholder="Your email" name="email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Copyright and horizontal rule -->
+        <div class="copyright">
+            <p>&copy; 2025 Mind Ease. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- footer end here -->
+</body>
+
+<script src="./assets/js/script.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var currentIndex = 0;
+        var items = $('.carousel-item');
+        var totalItems = items.length;
+
+        // Function to go to a specific slide
+        function goToSlide(index) {
+            if (index < 0) index = totalItems - 1; // Loop to last slide
+            if (index >= totalItems) index = 0; // Loop to first slide
+
+            // Animate to the next slide
+            $('.carousel-items').css('transform', 'translateX(' + (-index * 100) + '%)');
+            currentIndex = index;
+        }
+
+        // Next button functionality
+        $('.next').click(function () {
+            goToSlide(currentIndex + 1);
+        });
+
+        // Previous button functionality
+        $('.prev').click(function () {
+            goToSlide(currentIndex - 1);
+        });
+
+        // Autoplay functionality
+        setInterval(function () {
+            goToSlide(currentIndex + 1);
+        }, 5000); // Change slide every 5 seconds
+
+        // Show the first slide on load
+        goToSlide(currentIndex);
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        var currentIndex = 0;
+        var $carouselSlides = $('.custom-carousel-slides');
+        var $carouselSlide = $('.custom-carousel-slide');
+        var totalSlides = $carouselSlide.length;
+        var slideWidth = $carouselSlide.outerWidth(true);
+
+        // Set the total width of the slides container
+        $carouselSlides.width(slideWidth * totalSlides);
+
+        // Function to go to a specific slide
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1; // Loop to last slide
+            if (index >= totalSlides) index = 0; // Loop to first slide
+
+            // Animate to the next slide
+            $carouselSlides.css('transform', 'translateX(' + (-index * slideWidth) + 'px)');
+            currentIndex = index;
+        }
+
+        // Next button functionality
+        $('.custom-next').click(function () {
+            goToSlide(currentIndex + 1);
+        });
+
+        // Previous button functionality
+        $('.custom-prev').click(function () {
+            goToSlide(currentIndex - 1);
+        });
+
+        // Auto play functionality (change slides every 3 seconds) — without looping
+        setInterval(function () {
+            goToSlide(currentIndex + 1);
+        }, 3000); // Change slide every 3 seconds
+
+        // Show the first slide on load
+        goToSlide(currentIndex);
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialization for testimonial carousel
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.testimonial-item');
+        const prevButton = document.querySelector('.custom-prev-1');
+        const nextButton = document.querySelector('.custom-next-1');
+        const totalItems = items.length;
+
+        // Function to move to the next or previous slide
+        function showItem(index) {
+            // Handle looping
+            if (index < 0) index = totalItems - 1;
+            if (index >= totalItems) index = 0;
+
+            // Apply the translation for the carousel
+            items.forEach((item) => {
+                item.style.transform = `translateX(-${index * 100}%)`;
+            });
+            currentIndex = index;
+        }
+
+        // Next and previous buttons event listeners
+        prevButton.addEventListener('click', () => {
+            showItem(currentIndex - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            showItem(currentIndex + 1);
+        });
+
+        // Auto slide functionality
+        setInterval(() => {
+            showItem(currentIndex + 1);
+        }, 5000); // Change slide every 5 seconds
+
+        // Show the first slide on load
+        showItem(currentIndex);
+    });
+</script>
+
+
+</html>
